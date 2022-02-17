@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -d "${HOME}/bin" ];
+if [ ! -d "${HOME}/bin" ]; then
     mkdir ${HOME}/bin
 fi
 
