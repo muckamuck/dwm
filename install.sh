@@ -6,4 +6,4 @@ fi
 
 ln -s $(pwd)/dot_xinitrc ${HOME}/.xinitrc
 ln -s $(pwd)/status.sh ${HOME}/bin/status.sh
-sudo pacman -S ttf-ubuntu-font-family ttf-font-awesome
+sudo pacman -S ttf-ubuntu-font-family ttf-font-awesome picom nitrogen
