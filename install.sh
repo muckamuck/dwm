@@ -4,6 +4,6 @@ if [ ! -d "${HOME}/bin" ]; then
     mkdir ${HOME}/bin
 fi
 
-ln -s $(pwd)/dot_xinitrc ${HOME}/.xinitrc
-ln -s $(pwd)/status.sh ${HOME}/bin/status.sh
-sudo pacman -S ttf-ubuntu-font-family ttf-font-awesome picom nitrogen
+ln -sf $(pwd)/dot_xinitrc ${HOME}/.xinitrc
+ln -sf $(pwd)/status.sh ${HOME}/bin/status.sh
+sudo pacman -S ttf-ubuntu-font-family ttf-font-awesome picom nitrogen xorg-xsetroot
