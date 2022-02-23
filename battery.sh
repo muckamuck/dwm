@@ -16,7 +16,7 @@ p=$(
 
 if [ "${p}" -lt 36 ]; then
     echo -n "${one_quarter}  ${p}%"
-elif [ "${p}" -lt 50 ]; then
+elif [ "${p}" -lt 51 ]; then
     echo -n "${half}  ${p}%"
 elif [ "${p}" -lt 90 ]; then
     echo -n "${three_quarter}  ${p}%"
