@@ -24,13 +24,14 @@ while true
 do
     lstr=$(cat /proc/loadavg | awk '{print $1}')
     wstr=$(cat /tmp/weather.out)
-	dstr=$(date '+%m/%d/%Y %H:%M')
+    dstr=$(date '+%m/%d/%Y %H:%M')
+    mstr=$(free | grep ^Mem | awk '{printf "%.1f", $3 * 100 / $2}')
 
     if [ "${LAPTOP}" == "true" ]; then
         bstr=$(cat /tmp/battery.out)
-	    message=" ${wstr} ${sep} ${dstr} ${sep} Load: ${lstr} ${sep} ${who} ${sep} ${bstr} "
+	    message=" ${wstr} ${sep} ${dstr} ${sep} Load: ${lstr} ${sep} Mem: ${mstr}% ${sep} ${who} ${sep} ${bstr} "
     else
-	    message=" ${wstr} ${sep} ${dstr} ${sep} Load: ${lstr} ${sep} ${who} "
+	    message=" ${wstr} ${sep} ${dstr} ${sep} Load: ${lstr} ${sep} Mem: ${mstr}% ${sep} ${who} "
     fi
 	xsetroot -name "${message}"
 	sleep 5
