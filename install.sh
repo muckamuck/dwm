@@ -4,6 +4,7 @@ if [ ! -d "${HOME}/bin" ]; then
     mkdir ${HOME}/bin
 fi
 
+ln -sf $(pwd)/rofi ${HOME}/.config/rofi
 ln -sf $(pwd)/dot_xinitrc ${HOME}/.xinitrc
 ln -sf $(pwd)/status.sh ${HOME}/bin/status.sh
 ln -sf $(pwd)/battery.sh ${HOME}/bin/battery.sh
