@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Ubuntu Mono:style=Bold:size=14:antialias=true:autohint=true", "fontawesome:size=14" };
-	static const char dmenufont[]       = "Ubuntu Mono:style=Bold:size=14:antialias=true:autohint=true";
+static const char *fonts[]          = { "Ubuntu Mono:style=Bold:size=16:antialias=true:autohint=true", "fontawesome:size=16" };
+	static const char dmenufont[]       = "Ubuntu Mono:style=Bold:size=16:antialias=true:autohint=true";
 	static const char col_gray1[]       = "#000044";
 	static const char col_gray2[]       = "#444444";
 	static const char col_gray3[]       = "#bbbbbb";
@@ -19,7 +19,7 @@ static const char *fonts[]          = { "Ubuntu Mono:style=Bold:size=14:antialia
 	};
 
 	/* tagging */
-	static const char *tags[] = { "", "", "", "", ""};
+	static const char *tags[] = { "", "", "", "", "" };
 
 	static const Rule rules[] = {
 		/* xprop(1):
@@ -62,6 +62,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd2[]  = { "alacritty", NULL };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *browsercmd[]  = { "brave", NULL };
+static const char *printScreenCmd[]  = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -69,6 +70,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = browsercmd } },
+	{ MODKEY,                       XK_Print,  spawn,          {.v = printScreenCmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
