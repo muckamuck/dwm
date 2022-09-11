@@ -1,0 +1,11 @@
+//@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+configuration {
+    display-drun: "Applications";
+    //font: "Ubuntu Mono:style=Bold:size=18:antialias=true:autohint=true";
+    font: "Adobe New Century Schoolbook 16";
+    drun-display-format: "{icon} {name}";
+    show-icons: true;
+}
+
+@theme "/home/duket/.config/rofi/themes/android_notification.rasi"
