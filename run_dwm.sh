@@ -29,13 +29,8 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-if [ -f "${HOME}/.config/dwm/xrandr" ]; then
-    . ${HOME}/.config/dwm/xrandr
-    echo "XRANDR_COMMAND=${XRANDR_COMMAND}" > /tmp/xrandr_command
-    ${XRANDR_COMMAND}
-else
-    echo "Can not find . ${HOME}/.config/dwm/xrandr"
-    exit 1
+if [ -f "${HOME}/.local/bin/xrandr" ]; then
+    bash  ${HOME}/.local/bin/xrandr >/tmp/xrandr.log 2>/dev/null /tmp/xrandr.log
 fi
 
 ${HOME}/bin/status.sh &
