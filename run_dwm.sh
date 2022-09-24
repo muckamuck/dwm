@@ -30,7 +30,7 @@ if [ -f "$usermodmap" ]; then
 fi
 
 if [ -f "${HOME}/.local/bin/xrandr" ]; then
-    bash  ${HOME}/.local/bin/xrandr >/tmp/xrandr.log 2>/dev/null /tmp/xrandr.log
+    bash  ${HOME}/.local/bin/xrandr >/tmp/xrandr.log 2>/tmp/xrandr.log
 fi
 
 ${HOME}/bin/status.sh &
