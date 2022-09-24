@@ -28,7 +28,16 @@ fi
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
-xrandr --output "DP-0" --mode 2560x1080 --output "DP-2" --mode 1920x1080 --above "DP-0"
+
+if [ -f "${HOME}/.config/dwm/xrandr" ]; then
+    . ${HOME}/.config/dwm/xrandr
+    echo "XRANDR_COMMAND=${XRANDR_COMMAND}" > /tmp/xrandr_command
+    ${XRANDR_COMMAND}
+else
+    echo "Can not find . ${HOME}/.config/dwm/xrandr"
+    exit 1
+fi
+
 ${HOME}/bin/status.sh &
 picom -f &
 nitrogen --restore &
