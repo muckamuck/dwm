@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH=/usr/bin:${PATH}
 
 sep=""
 sep=""
@@ -8,6 +9,7 @@ who="$(whoami)@$(cat /proc/sys/kernel/hostname)"
 touch /tmp/weather.out
 while true; do
     curl -s "https://wttr.in/Ankeny?format=%C%20%t/%f" 2>/tmp/weather.err > /tmp/weather.out
+    cat /tmp/weather.out
     sleep 900
 done &
 

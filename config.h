@@ -19,7 +19,11 @@ static const char *fonts[]          = { "Ubuntu Mono:style=Bold:size=14:antialia
 	};
 
 	/* tagging */
+    /*
 	static const char *tags[] = { "", "", "", ""};
+	static const char *tags[] = { "[1]", "[2]", "[3]", "[4]"};
+    */
+	static const char *tags[] = { "", "2", "3", "4"};
 
 	static const Rule rules[] = {
 		/* xprop(1):
@@ -39,9 +43,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "",      tile },    /* first entry is default */
+	{ "i",      NULL },    /* no layout function means floating behavior */
+	{ "",      monocle },
 };
 
 /* key definitions */
